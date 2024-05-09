@@ -23,7 +23,11 @@ describe("Buscar", () => {
       expect(buscarProyecto("proyecto", proyectos)).toEqual(["proyecto1", "proyecto2", "proyecto3"]);
   });
 
- 
+  it("encuentra proyectos cuyo nombre empieza con el criterio de búsqueda", () => {
+      let proyectos = ["proyecto1", "proyecto2", "otroProyecto2"];
+      expect(buscarProyecto("proyecto", proyectos)).toEqual(["proyecto1", "proyecto2"]);
+  });
+
 });
 
 function buscarProyecto(nombre, proyectos) {
