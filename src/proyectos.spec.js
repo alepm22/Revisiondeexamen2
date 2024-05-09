@@ -18,6 +18,12 @@ describe("Buscar", () => {
       expect(buscarProyecto("proyecto2", proyectos)).toEqual("proyecto2");
   });
 
+  it("encuentra varios proyectos cuando hay más de una coincidencia", () => {
+      let proyectos = ["proyecto1", "proyecto2", "proyecto3", "otroProyecto2"];
+      expect(buscarProyecto("proyecto", proyectos)).toEqual(["proyecto1", "proyecto2", "proyecto3"]);
+  });
+
+ 
 });
 
 function buscarProyecto(nombre, proyectos) {
