@@ -5,4 +5,8 @@ describe("buscar proyecto por nombre", () => {
     let proyectos=[]
     expect(buscarProyectoPor("proy1",proyectos)).toEqual("No existen proyectos");
   });
+  it("Deberia retornar el nombre del proyectos buscado si es que solo tenemos un proyecto", () => {
+    let proyectos=["proy1"]
+    expect(buscarProyectoPor("proy1",proyectos)).toEqual("proy1");
+  });
 });
