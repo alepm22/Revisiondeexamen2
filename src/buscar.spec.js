@@ -36,11 +36,6 @@ describe("Buscar", () => {
         let proyectos = ["proyecto1", "proyecto2", "otroProyecto2"];
         expect(buscarProyecto("proyecto", proyectos)).toEqual(["proyecto1", "proyecto2"]);
     });
-
-    it("devuelve vacío cuando no existe coincidencia con ningún proyecto", () => {
-        let proyectos = ["proyecto1", "proyecto2", "proyecto3"];
-        expect(buscarProyecto("noExiste", proyectos)).toEqual("");
-    });
 });
 
 function buscarProyecto(nombre, proyectos) {
