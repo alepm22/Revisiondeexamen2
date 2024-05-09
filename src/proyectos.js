@@ -1,4 +1,3 @@
-
 function buscarProyectoPor(nombre, proyectos){
   const STRINGVACIO=""
   const TAMANIOPROYECTOS=proyectos.length
